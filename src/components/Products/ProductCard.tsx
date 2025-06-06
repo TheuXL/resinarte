@@ -10,24 +10,24 @@ interface ProductProps {
   index: number;
 }
 
-export const ProductCard = ({ name, description, price, image, category, index }: ProductProps) => {
+export const ProductCard = ({ name, description, price, image, category }: ProductProps) => {
   // Map of image components - we'll use placeholder when actual image not available
   const getProductImage = (imageKey: string) => {
     switch(imageKey) {
       case 'keychain-initial':
-        return '/src/assets/images/initial-keychain.jpg';
+        return '/assets/images/initial-keychain.jpg';
       case 'keychain-name':
-        return '/src/assets/images/name-keychain.jpg';
+        return '/assets/images/name-keychain.jpg';
       case 'keychain-mothers-day':
-        return '/src/assets/images/mothers-day-keychain.jpg';
+        return '/assets/images/mothers-day-keychain.jpg';
       case 'keychain-sports':
-        return '/src/assets/images/sports-keychain.jpg';
+        return '/assets/images/sports-keychain.jpg';
       case 'keychain-baby':
-        return '/src/assets/images/baby-keychain.jpg';
+        return '/assets/images/baby-keychain.jpg';
       case 'keychain-date':
-        return '/src/assets/images/date-keychain.jpg';
+        return '/assets/images/date-keychain.jpg';
       default:
-        return '/src/assets/images/placeholder.jpg';
+        return '/assets/images/placeholder.jpg';
     }
   };
 
@@ -60,7 +60,7 @@ export const ProductCard = ({ name, description, price, image, category, index }
             className="w-full h-full object-cover"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = '/src/assets/images/placeholder.jpg';
+              target.src = '/assets/images/placeholder.jpg';
             }}
           />
         </div>

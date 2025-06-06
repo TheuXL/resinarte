@@ -74,34 +74,7 @@ export const Hero = () => {
               </a>
             </motion.div>
 
-            {/* Moved the floating product images to the left side */}
-            <div className="relative mt-12 hidden sm:block">
-              <motion.div 
-                className="absolute left-0 bottom-0 w-20 h-20 rounded-lg overflow-hidden shadow-xl z-20"
-                initial={{ opacity: 0, x: -20, y: 20 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.9 }}
-              >
-                <img 
-                  src="/src/assets/images/initial-keychain.jpg" 
-                  alt="Chaveiro personalizado" 
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-              
-              <motion.div 
-                className="absolute left-24 bottom-10 w-24 h-24 rounded-lg overflow-hidden shadow-xl z-20"
-                initial={{ opacity: 0, x: -20, y: 20 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.1 }}
-              >
-                <img 
-                  src="/src/assets/images/mothers-day-keychain.jpg" 
-                  alt="Chaveiro para o Dia das Mães" 
-                  className="w-full h-full object-cover"
-                />
-              </motion.div>
-            </div>
+            {/* Floating product images removed as requested */}
           </motion.div>
           
           <motion.div 
@@ -113,7 +86,7 @@ export const Hero = () => {
             <div className="rounded-xl overflow-hidden shadow-2xl glass p-3 relative z-10 floating">
               <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden img-hover-zoom">
                 <img 
-                  src="/src/assets/images/logo.jpg" 
+                  src="/assets/images/logo.jpg" 
                   alt="Resinarte - Arte em Resina" 
                   className="w-full h-full object-cover"
                 />

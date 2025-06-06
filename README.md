@@ -70,6 +70,9 @@ Para construir a versão de produção:
 ```
 npm run build
 ```
+```
+To deploy to production (resinarte.vercel.app), run `vercel --prod`
+```
 
 Os arquivos serão gerados na pasta `dist`, que pode ser implantada em qualquer serviço de hospedagem estática.
 

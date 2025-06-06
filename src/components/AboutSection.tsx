@@ -146,7 +146,7 @@ export const AboutSection = () => {
                 transition={{ duration: 0.2 }}
               >
                 <img 
-                  src="/src/assets/images/name-keychain.jpg" 
+                  src="/assets/images/name-keychain.jpg" 
                   alt="Chaveiro personalizado com nome" 
                   className="w-full h-full object-cover"
                 />
@@ -157,7 +157,7 @@ export const AboutSection = () => {
                 transition={{ duration: 0.2 }}
               >
                 <img 
-                  src="/src/assets/images/initial-keychain.jpg" 
+                  src="/assets/images/initial-keychain.jpg" 
                   alt="Chaveiro personalizado com inicial" 
                   className="w-full h-full object-cover"
                 />
@@ -168,7 +168,7 @@ export const AboutSection = () => {
                 transition={{ duration: 0.2 }}
               >
                 <img 
-                  src="/src/assets/images/date-keychain.jpg" 
+                  src="/assets/images/date-keychain.jpg" 
                   alt="Chaveiro personalizado com data" 
                   className="w-full h-full object-cover"
                 />
@@ -179,7 +179,7 @@ export const AboutSection = () => {
                 transition={{ duration: 0.2 }}
               >
                 <img 
-                  src="/src/assets/images/mothers-day-keychain.jpg" 
+                  src="/assets/images/mothers-day-keychain.jpg" 
                   alt="Chaveiro para o Dia das Mães" 
                   className="w-full h-full object-cover"
                 />
