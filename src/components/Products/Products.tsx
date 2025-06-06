@@ -96,11 +96,11 @@ export const Products = () => {
 
   // Gallery images
   const galleryImages = [
-    { src: '/src/assets/images/initial-keychain.jpg', alt: 'Chaveiro com inicial' },
-    { src: '/src/assets/images/name-keychain.jpg', alt: 'Chaveiro com nome' },
-    { src: '/src/assets/images/mothers-day-keychain.jpg', alt: 'Chaveiro Dia das Mães' },
-    { src: '/src/assets/images/date-keychain.jpg', alt: 'Chaveiro com data' },
-    { src: '/src/assets/images/sports-keychain.jpg', alt: 'Chaveiro esportivo' }
+    { src: '/assets/images/initial-keychain.jpg', alt: 'Chaveiro com inicial' },
+    { src: '/assets/images/name-keychain.jpg', alt: 'Chaveiro com nome' },
+    { src: '/assets/images/mothers-day-keychain.jpg', alt: 'Chaveiro Dia das Mães' },
+    { src: '/assets/images/date-keychain.jpg', alt: 'Chaveiro com data' },
+    { src: '/assets/images/sports-keychain.jpg', alt: 'Chaveiro esportivo' }
   ];
 
   return (
