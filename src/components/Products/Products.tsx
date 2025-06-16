@@ -23,7 +23,7 @@ export const Products = () => {
       id: 1,
       name: 'Chaveiros Personalizados com Iniciais',
       description: 'Chaveiros elegantes em resina com iniciais personalizadas e acabamento em glitter. Disponíveis em diversas cores e com pingentes decorativos.',
-      price: 'A partir de R$ 29,90',
+      price: 'A partir de R$ 14,90',
       image: 'keychain-initial',
       category: 'chaveiros'
     },
@@ -31,7 +31,7 @@ export const Products = () => {
       id: 2,
       name: 'Chaveiros com Nomes',
       description: 'Chaveiros personalizados com nomes completos, em formato de nuvem ou coração, com detalhes em folha de ouro e glitter.',
-      price: 'A partir de R$ 32,90',
+      price: 'A partir de R$ 14,90',
       image: 'keychain-name',
       category: 'chaveiros'
     },
@@ -39,7 +39,7 @@ export const Products = () => {
       id: 3,
       name: 'Chaveiros para o Dia das Mães',
       description: 'Chaveiros especiais para o Dia das Mães com mensagem "Feliz Dia das Mães" e decoração exclusiva em cores vibrantes.',
-      price: 'R$ 35,90',
+      price: 'R$ 14,90',
       image: 'keychain-mothers-day',
       category: 'datas-especiais'
     },
@@ -47,7 +47,7 @@ export const Products = () => {
       id: 4,
       name: 'Chaveiros Esportivos',
       description: 'Chaveiros temáticos para amantes de esportes, com símbolos de handebol, futebol e outros esportes. Perfeito para presentear atletas.',
-      price: 'R$ 29,90',
+      price: 'R$ 19,90',
       image: 'keychain-sports',
       category: 'tematicos'
     },
@@ -55,7 +55,7 @@ export const Products = () => {
       id: 5,
       name: 'Chaveiros Infantis',
       description: 'Chaveiros delicados com temas infantis, incluindo famílias de ursinhos. Ideal para lembranças de maternidade ou aniversários.',
-      price: 'A partir de R$ 25,90',
+      price: 'A partir de R$ 19,90',
       image: 'keychain-baby',
       category: 'infantil'
     },
@@ -63,7 +63,7 @@ export const Products = () => {
       id: 6,
       name: 'Chaveiros Personalizados com Datas',
       description: 'Chaveiros comemorativas com datas especiais, nomes e símbolos personalizados. Perfeito para celebrações e recordações.',
-      price: 'R$ 39,90',
+      price: 'R$ 19,90',
       image: 'keychain-date',
       category: 'datas-especiais'
     },
