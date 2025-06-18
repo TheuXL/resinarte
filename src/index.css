@@ -1,17 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './tailwind.css';
 
 @layer base {
   html {
     scroll-behavior: smooth;
-  }
-  
-  body {
+}
+
+body {
     @apply bg-primary text-dark font-sans antialiased;
-    margin: 0;
-    min-height: 100vh;
-  }
+  margin: 0;
+  min-height: 100vh;
+}
 
   h1, h2, h3, h4 {
     @apply font-serif;
@@ -19,8 +17,8 @@
   
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold;
-  }
-  
+}
+
   h2 {
     @apply text-3xl md:text-4xl font-bold;
   }
@@ -35,7 +33,7 @@
 
   a {
     @apply text-accent hover:text-dark transition-colors duration-300;
-  }
+}
 
   button, .button {
     @apply bg-accent text-light px-6 py-3 rounded-md font-medium
@@ -46,8 +44,8 @@
 @layer components {
   .container {
     @apply px-4 mx-auto max-w-7xl;
-  }
-  
+}
+
   .section {
     @apply py-16 md:py-24;
   }

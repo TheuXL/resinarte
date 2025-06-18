@@ -13,6 +13,7 @@ export const Contact = () => {
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -31,26 +32,28 @@ export const Contact = () => {
   };
   
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
+    // Não previne o comportamento padrão para permitir o envio do formulário
+    setIsSubmitting(true);
     
-    // Simulate successful submission
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
+    // Simular o sucesso após o envio do formulário
     setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        product: 'Selecione um produto',
-        isCustom: false,
-        quantity: '1',
-      });
-    }, 3000);
+      setIsSubmitted(true);
+      setIsSubmitting(false);
+      
+      // Reset form after 6 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+          product: 'Selecione um produto',
+          isCustom: false,
+          quantity: '1',
+        });
+      }, 6000);
+    }, 1000);
   };
 
   // Animation variants
@@ -137,15 +140,25 @@ export const Contact = () => {
                 </div>
                 <h3 className="text-2xl font-semibold mb-2">Mensagem Enviada!</h3>
                 <p className="text-secondary">
-                  Obrigado pelo seu interesse. Entraremos em contato em breve!
+                  Obrigado pelo seu interesse. Sua mensagem foi enviada para resinarteluz@gmail.com.
+                </p>
+                <p className="text-secondary mt-2">
+                  Entraremos em contato em breve!
                 </p>
               </motion.div>
             ) : (
               <motion.form 
-                onSubmit={handleSubmit} 
+                action="https://formsubmit.co/resinarteluz@gmail.com"
+                method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-6"
                 variants={containerVariants}
               >
+                {/* FormSubmit.co configuração simples */}
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="Novo pedido de orçamento do site" />
+                <input type="hidden" name="_next" value={window.location.href} />
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <motion.div variants={itemVariants}>
                     <label htmlFor="name" className="block text-sm font-medium text-dark mb-1">
@@ -175,7 +188,7 @@ export const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-2 rounded-md border border-secondary/30 focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none transition bg-white/80 backdrop-blur-sm"
-                      placeholder="seu.email@exemplo.com"
+                      placeholder="seu@email.com"
                     />
                   </motion.div>
                   
@@ -254,7 +267,7 @@ export const Contact = () => {
                 
                 <motion.div variants={itemVariants}>
                   <label htmlFor="message" className="block text-sm font-medium text-dark mb-1">
-                    Detalhes do pedido
+                    Mensagem
                   </label>
                   <textarea
                     id="message"
@@ -263,23 +276,24 @@ export const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={4}
-                    className="w-full px-4 py-2 rounded-md border border-secondary/30 focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none transition bg-white/80 backdrop-blur-sm"
-                    placeholder="Descreva seu pedido, incluindo detalhes como cores, nome/iniciais a serem personalizados, formato desejado e qualquer outra informação relevante para a criação."
+                    className="w-full px-4 py-2 rounded-md border border-secondary/30 focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none transition bg-white/80 backdrop-blur-sm h-32 resize-none"
+                    placeholder="Descreva aqui os detalhes do seu pedido, como cores, pingentes, e outras personalizações..."
                   />
                 </motion.div>
                 
-                <motion.div 
-                  className="text-right"
-                  variants={itemVariants}
-                >
-                  <motion.button 
-                    type="submit" 
-                    className="button"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                <motion.div className="text-center pt-4" variants={itemVariants}>
+                  <button 
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="px-6 py-3 rounded-md font-medium bg-accent text-light hover:bg-accent/90 transition-all duration-300 inline-block shadow-md w-full md:w-auto"
                   >
-                    Enviar Solicitação
-                  </motion.button>
+                    {isSubmitting ? 'Enviando...' : 'Enviar Pedido de Orçamento'}
+                  </button>
+                  
+                  <p className="text-xs text-secondary mt-4">
+                    O formulário enviará sua mensagem diretamente para resinarteluz@gmail.com.
+                    Se preferir, você também pode enviar um email diretamente para <a href="mailto:resinarteluz@gmail.com" className="text-accent">resinarteluz@gmail.com</a>
+                  </p>
                 </motion.div>
               </motion.form>
             )}
@@ -316,7 +330,7 @@ export const Contact = () => {
               whileHover={{ y: -5 }}
             >
               <a 
-                href="mailto:contato@resinarte.com.br" 
+                href="mailto:resinarteluz@gmail.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="block"
@@ -327,7 +341,7 @@ export const Contact = () => {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">E-mail</h3>
-                <span className="text-secondary">contato@resinarte.com.br</span>
+                <span className="text-secondary">resinarteluz@gmail.com</span>
               </a>
             </motion.div>
             

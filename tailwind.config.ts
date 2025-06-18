@@ -10,7 +10,9 @@ export default {
       colors: {
         primary: '#E3DACA',    // Light beige
         secondary: '#A69F88',  // Taupe
-        accent: '#6D6875',     // Muted purple
+        accent: {
+         DEFAULT: '#6D6875',     // Muted purple
+        },
         dark: '#41403E',       // Dark gray
         light: '#F5F2EB',      // Off-white
       },

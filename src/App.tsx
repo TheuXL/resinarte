@@ -5,7 +5,6 @@ import { Products } from './components/Products/Products';
 import { AboutSection } from './components/AboutSection';
 import { Contact } from './components/Contact/Contact';
 import { Footer } from './components/Footer/Footer';
-import './App.css';
 
 function App() {
   useEffect(() => {
@@ -23,7 +22,7 @@ function App() {
       });
     });
   }, []);
-  
+
   return (
     <div className="app">
       <Header />
@@ -34,7 +33,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </div>
+      </div>
   );
 }
 
