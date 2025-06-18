@@ -31,7 +31,7 @@ export const Contact = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (_e: React.FormEvent) => {
     // Não previne o comportamento padrão para permitir o envio do formulário
     setIsSubmitting(true);
     
